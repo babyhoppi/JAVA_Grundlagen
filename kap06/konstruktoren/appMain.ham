@@ -1,0 +1,7 @@
+/*object-oriented program*/void main() {
+	KonstrukterHamster marco = new KonstrukterHamster();
+	KonstrukterHamster marco1 = new KonstrukterHamster(2,3, HAMSTER.SUED, 0);
+	KonstrukterHamster marco2 = new KonstrukterHamster(1,1, HAMSTER.WEST, 0, HAMSTER.GELB);
+	KonstrukterHamster marco3 = new KonstrukterHamster(3,3); 
+    
+}

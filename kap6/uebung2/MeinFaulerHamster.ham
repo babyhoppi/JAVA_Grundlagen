@@ -1,0 +1,45 @@
+/*class*/import Programme\hamster-oop\one4all\AllroundHamster;
+
+class MeinFaulerHamster extends Hamster {
+    static int gesammelteKoerner=0;
+	
+	// Konstruktor 
+	MeinFaulerHamster( int r, int s,int b, int a ) {
+		super(r, s,b,a);
+	}
+	
+	void sammle(){
+		while(this.kornDa()){
+			this.nimm();
+			gesammelteKoerner++;
+		}
+	}
+	
+	void sicheresVor(){
+		if(this.vornFrei()){
+			this.vor();
+		}
+	}
+	
+	void laufe( int schritte ) {
+		while( schritte-- > 0 ){
+			sammle();
+			sicheresVor();
+		}
+	}
+	void neuerHamster(int r){
+		MeinFaulerHamster  oli1 = new MeinFaulerHamster(r, 0,Hamster.OST,0);
+				oli1.laufe(Territorium.getAnzahlSpalten()-1);
+	}
+	void pruefeReihe(int r){
+		boolean kornDa = false;
+		for (int i = 0;i < Territorium.getAnzahlSpalten();i++){
+		 	if( Territorium.getAnzahlKoerner(this.getReihe(),i) > 0){
+		 		kornDa = true;
+	 		}
+	 	}
+	 	if(kornDa == true){
+	 		neuerHamster(this.getReihe());
+	 	}
+	}
+}

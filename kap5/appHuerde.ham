@@ -1,0 +1,16 @@
+/*object-oriented program*/void main() {
+    
+    int reihe = Hamster.getStandardHamster().getReihe();
+	int spalte = Hamster.getStandardHamster().getSpalte();
+	int blickrichtung = Hamster.getStandardHamster().getBlickrichtung();
+	
+	MeinHamsterHuerden karateKid = new MeinHamsterHuerden(); 
+	karateKid.init( reihe, spalte, blickrichtung, 0 );    
+	
+	while( karateKid.naechsteMauer() ) {
+	
+		karateKid.huerdeRauf();
+		karateKid.huerdeRueber();		
+		karateKid.huerdeRunter();
+	}
+}

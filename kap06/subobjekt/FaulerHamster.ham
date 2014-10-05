@@ -1,0 +1,16 @@
+/*class*/class FaulerHamster extends Hamster {
+    
+    //Objekte der Klasse FaulerHamster "verwalten" einen Stellvertreter/Knecht
+    Hamster knecht;
+    
+    /**
+    *	Initialisierung des faulen Hamsters und des Knechts
+    */
+    
+    FaulerHamster( int r, int s, int b, int a) {
+    	super(r,s,b,a);
+    	
+    	// wir erzeugen einen neuen Hamster (im Hamster)
+    	this.knecht = new Hamster (r,s,b,a);
+    }
+}

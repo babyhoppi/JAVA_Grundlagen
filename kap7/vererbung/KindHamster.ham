@@ -1,0 +1,33 @@
+/*class*/class KindHamster extends ElternHamster {
+    	
+    	KindHamster(boolean isSchoen) {
+    		
+    		//ein Methodenaufruf der sich "super" nennt
+    		super(isSchoen);
+    		this.init(0,0,Hamster.OST,0);
+    	}   	
+    	
+    	void wieIstDasWetter() {
+    		this.schreib("Das Wetter ist schön: " + this.schoenesWetter);
+    	}
+    	/**
+    	* die Methode vor(), die der KindHamster von der Elternkallse erbt, wird
+    	* hier überschrieben.
+    	*
+    	* Überschreiben = Methode hat den gleichen Namen und die gleiche Parameterliste zusammen Signatur, aber
+    	* 					eine andere Funktionialität
+    	*
+    	* AUFPASSEN!!! zwischen überLADEN und überSCHREIBEN wird genau unterschieden
+    	* vor() und vor() 				= überSCHRIEBEN
+    	* vor() und vor(int anzahl) 	= überLADEN
+    	*/
+    	public void vor() {
+    	
+    		//... keine Lust
+    		this.linksUm();
+    		this.linksUm();
+    		this.linksUm();
+    		this.linksUm();
+    		super.vor();
+    	}
+}

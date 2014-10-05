@@ -1,0 +1,6 @@
+/*class*/class Y extends X {
+    
+    Y() {
+    	//ich bin soein toller Konstruktor
+    }
+}

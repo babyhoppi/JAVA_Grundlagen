@@ -1,0 +1,18 @@
+/*object-oriented program*/void main() {
+
+	int reihe = Hamster.getStandardHamster().getReihe();
+	int spalte = Hamster.getStandardHamster().getSpalte();
+	int blickrichtung = Hamster.getStandardHamster().getBlickrichtung();
+	
+	MeinHamsterAufgabe13Kap15 marco = new MeinHamsterAufgabe13Kap15(); 
+	marco.init( reihe, spalte, blickrichtung, 0 );
+	
+	while( marco.naechsteMauer() ) {
+		
+		marco.linksEntlang();
+		if( marco.naechsteMauer() )
+			 marco.rechtsEntlang();
+	}  
+	
+	marco.nimm();
+}

@@ -1,0 +1,51 @@
+/*class*/class MeinHamster extends Hamster {
+
+	void naechsteWand() {
+		while( this.vornFrei() ) {
+			this.vor();
+		}
+	}  
+	
+	void naechsteWand( int gap) {
+		
+		int tmp = gap;
+		
+		while( this.vornFrei() ) {
+			
+			if((gap++)%tmp == 0) {
+				this.gib();
+				this.vor();
+			}
+		}
+	} 
+	
+	void naechsteWand( int gap, int anzahl) {
+		int tmp = gap;
+		
+		while( this.vornFrei() ) {
+			if((gap++)%tmp == 0) {
+				this.lege(anzahl);
+				this.vor();
+			}
+		}
+	}  
+	
+	void naechsteWand(boolean x) {
+	
+		if(x) {
+			this.kehrtUm();
+		}
+		this.naechsteWand();
+	}
+	
+	void kehrtUm() {
+		this.linksUm();
+		this.linksUm();
+	}
+	
+	void lege (int anzahl) {
+		while ( anzahl-- > 0) {
+			this.gib();
+		}
+	}
+}

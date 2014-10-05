@@ -1,0 +1,38 @@
+/*object-oriented program*//**
+*	Die Przedur rechtsUm() verlangt als Parameter eine Referenz
+*	auf ein Hamsterobjekt
+*
+*	Beim Aufruf der Prozedur muss ein Hamster übergeben werden. Diesen
+*	Hamster bezeichnen wir innerhalb der Prozedur ganz allgemein als x.
+*
+**/
+
+
+void main() {
+    Hamster paul = Hamster.getStandardHamster();
+    // beim Aufruf von rechtsUm() muss eine Objektvariable vom Typ Hamster
+    // übergeben werden:
+    int a =4;
+    while(a > 0) {
+    	laufenUndRechtsUm( paul);
+    	a--;    	
+    }
+    
+    
+    
+}
+
+void rechtsUm(Hamster x) {
+	// der Hamster x dreht sich dreimal links herum
+	x.linksUm();
+	x.linksUm();
+	x.linksUm();
+}
+
+void laufenUndRechtsUm(Hamster x) {
+	
+	while (x.vornFrei()){
+		x.vor();
+	}
+	rechtsUm(x);
+}

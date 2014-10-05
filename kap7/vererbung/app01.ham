@@ -1,0 +1,7 @@
+/*object-oriented program*/void main() {
+
+	KindHamster marco = new KindHamster(false);   
+	
+	marco.wieIstDasWetter(); 
+	marco.vorwaerts();
+}

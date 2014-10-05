@@ -1,0 +1,19 @@
+/*object-oriented program*/void main() {
+    //wir wollen in alle vier Ecken eines beliebigen Territoriums Hamster platzieren
+    
+    // links oben:
+    
+    Hamster linksOben = new Hamster(0,0, Hamster.OST,0);
+    
+    // links unten:
+    
+    Hamster linksUnten = new Hamster(Territorium.getAnzahlReihen() -1,0, Hamster.OST,0);
+    
+    // rechts oben:
+    
+    Hamster rechtsOben = new Hamster(0,Territorium.getAnzahlSpalten() -1, Hamster.OST,0);
+    
+    // rechts unten:
+    
+    Hamster rechtsUnten = new Hamster(Territorium.getAnzahlReihen() -1,Territorium.getAnzahlSpalten() -1, Hamster.OST,0);
+}

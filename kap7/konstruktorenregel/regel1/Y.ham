@@ -1,0 +1,13 @@
+/*class*/class Y extends X {
+    
+   
+    Y(int e){
+    
+    	super(e);
+    	
+    	// ..  und hier können wir dann alles für y initaliesieren
+    
+    }
+    
+    
+}

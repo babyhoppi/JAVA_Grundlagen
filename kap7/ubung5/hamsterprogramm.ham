@@ -1,0 +1,8 @@
+/*object-oriented program*/// Testprogramm
+void main() {
+    RechteckHamster heidi = new RechteckHamster(0, 0, Hamster.OST, 100000);
+    GefuelltesRechteckHamster maria = new GefuelltesRechteckHamster( 10, 10, Hamster.OST, 100000);
+
+    heidi.zeichne(0, 0, 4,4);
+    maria.zeichne(3, 3, 8,3);
+}

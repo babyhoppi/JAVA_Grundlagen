@@ -1,0 +1,35 @@
+/*class*//*object-oriented program*/void main() {
+ 
+	MeinHamster 	dozent = new MeinHamster();
+	
+	dozent.init( 4, 0, Hamster.NORD, 1000 );
+	
+	int a = 4;
+	
+	while( a > 0 ) {
+	
+		dozent.sammleReihe();	
+		dozent.rechtsUm();
+		
+		a--;
+	} 
+	
+	dozent.schreib("Körner gesammelt: " + dozent.getAnzahlGesammelteKoerner() );
+}/*object-oriented program*/void main() {
+ 
+	MeinHamster 	dozent = new MeinHamster();
+	
+	dozent.init( 4, 0, Hamster.NORD, 1000 );
+	
+	int a = 4;
+	
+	while( a > 0 ) {
+	
+		dozent.sammleReihe();	
+		dozent.rechtsUm();
+		
+		a--;
+	} 
+	
+	dozent.schreib("Körner gesammelt: " + dozent.getAnzahlGesammelteKoerner() );
+}

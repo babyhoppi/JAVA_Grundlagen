@@ -1,0 +1,21 @@
+/*object-oriented program*/void main() {
+    Hamster paul = Hamster.getStandardHamster();
+    
+    int spalte = paul.getSpalte();
+    int reihe = paul.getReihe();
+    int richtung = paul.getBlickrichtung();
+    
+    paul = new Hamster(reihe, spalte, richtung,0);
+    
+    while( paul.getBlickrichtung() != 0){
+    paul.linksUm();
+    }
+    while( paul.getReihe() != 0){
+    paul.vor();
+    }
+    paul.linksUm();
+    while( paul.getSpalte() != 0){
+    paul.vor();
+    }
+    
+}

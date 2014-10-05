@@ -1,0 +1,22 @@
+/*object-oriented program*/void main() {
+
+	int endeR = 0;
+	int beginnR = Territorium.getAnzahlReihen()-1;
+	int endeS = Territorium.getAnzahlSpalten()-1;
+	int anfangS = 0;
+	
+	int reihe = 0;
+	int spalte = 0;
+	
+	MeinFaulerHamster oli = new MeinFaulerHamster(beginnR, anfangS,0, Hamster.NORD);
+	
+	while(reihe < Territorium.getAnzahlReihen()-1){
+		oli.pruefeReihe(beginnR);
+			if(oli.vornFrei()){
+				oli.vor();
+				reihe++;
+			}	
+	}
+	oli.schreib("Körner gesamt gesammelt: " + MeinFaulerHamster.gesammelteKoerner);
+		
+}

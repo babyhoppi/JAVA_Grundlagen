@@ -1,0 +1,11 @@
+/*object-oriented program*/void main () {
+	SammelHamster paul = new SammelHamster (0, 0,Hamster.OST , 0);
+	paul.laufeUndSammle ();
+	SammelHamster willi = new SammelHamster (1, 0,Hamster.OST , 0);
+	willi.laufeUndSammle ();
+	SammelHamster willi2 = new SammelHamster (2, 0,Hamster.OST , 0);
+	willi2.laufeUndSammle ();
+	SammelHamster willi3 = new SammelHamster (3, 0,Hamster.OST , 0);
+	willi3.laufeUndSammle ();
+	willi3.schreib("Gesammelte Körner gesamt: " + SammelHamster.getGemeinsamGesammelteKoerner());
+}

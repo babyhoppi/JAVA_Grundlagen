@@ -1,0 +1,6 @@
+/*object-oriented program*/void main() {
+    THamster marco = new THamster();
+    marco.init(1,1,Hamster.NORD,0);
+    marco.linksFrei();
+    marco.rechtsFrei();
+}

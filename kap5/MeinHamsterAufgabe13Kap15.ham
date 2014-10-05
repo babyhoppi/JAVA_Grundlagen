@@ -1,0 +1,74 @@
+/*class*/class MeinHamsterAufgabe13Kap15 extends Hamster {
+    
+    void rechtsUm() {
+    
+    	this.linksUm();
+    	this.linksUm();
+    	this.linksUm();
+    }
+    
+    void linksEntlang() {
+    
+    	this.linksUm();
+    	this.vor();
+    	this.rechtsUm();
+    	this.vor();
+    	
+    	while( !this.rechtsFrei() )
+    		this.vor();
+    		
+    	this.rechtsUm();
+    	this.vor();
+    	this.linksUm();
+    }
+    
+    void rechtsEntlang() {
+
+    	this.rechtsUm();
+    	this.vor();
+    	this.linksUm();
+    	this.vor();
+    	
+    	while( !this.linksFrei() )
+    		this.vor();
+
+    	this.linksUm();
+    	this.vor();
+    	this.rechtsUm();
+
+    }
+    
+    boolean rechtsFrei() {
+    	
+    	this.rechtsUm();
+    	boolean rueckgabe = vornFrei();
+    	this.linksUm();
+    	
+    	return rueckgabe;
+    }
+    
+    boolean linksFrei() {
+    	
+    	this.linksUm();
+    	boolean rueckgabe = vornFrei();
+    	this.rechtsUm();
+    	
+    	return rueckgabe;
+    }
+    
+    boolean naechsteMauer() {
+    	
+    	if( this.kornDa() )
+    		return false;
+    		
+    	while( this.vornFrei() ) {
+    	
+    		this.vor();
+    		if( this.kornDa() )
+    			return false;
+    	}
+    	
+    	return true;
+    	
+    }
+}

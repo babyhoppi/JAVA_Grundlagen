@@ -1,0 +1,14 @@
+/*class*/class X {
+    
+    
+    // Konstruktor **ohne** Parameter
+    X() {
+		//irgendwas an Initialisierung    
+    }
+    
+    
+    // Konstruktor **mit** Parameter
+    X(int e) {
+		//irgendwas anderes an Initialisierung    
+    }
+}

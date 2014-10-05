@@ -1,0 +1,46 @@
+/*class*//*class*/class MeinHamster extends Hamster {
+
+	// die Klasse bekommt eine neue Eigenschaft, ein neues Attribut
+	int gesammelteKoerner = 0;
+
+	// liefert die Anzahl der eingesammelten Körner
+	int getAnzahlGesammelteKoerner() {
+		
+		return this.gesammelteKoerner;
+	}
+
+	void rechtsUm() {
+		
+		// das Schlüssel this steht als Stellvertreter für 
+		// zukünftige, konkrete Objekte der Klasse MeinHamster
+		
+		this.linksUm();
+		this.linksUm();
+		this.linksUm();
+	}
+	
+	void vorwaerts() {
+	
+		while( this.vornFrei() )
+			this.vor();
+	}
+	
+	void sammleReihe() {
+	
+		this.sammleKachel();
+		
+		while( this.vornFrei() ) {
+		
+			this.vor();
+			this.sammleKachel();
+		}			
+	}
+	
+	void sammleKachel() {
+	
+		while( this.kornDa() ) {
+			this.nimm();
+			this.gesammelteKoerner += 1;
+		}
+	}
+}

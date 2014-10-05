@@ -1,0 +1,10 @@
+/*class*/class X {
+
+ 	int egal;
+    
+    //Konstruktor **mit** Parameter
+	X(int e){
+		this.egal = e;
+	}
+    
+}

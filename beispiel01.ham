@@ -1,0 +1,49 @@
+/*object-oriented program*/void main() {
+    
+    	// es kann mehr als nur ein Hamster geben, deshalb brauchen  ***alle***
+    	// Hamster einen Namen (auch der blaue Hamster)
+    	
+    	//unser blauer Hamster bekommt den Namen "Facepalm" aka Hoppe
+    	Hamster facepalm = Hamster.getStandardHamster();
+    	
+    	//um eine der Standardanweisungen des Hamsters ausführen zu lassen, 
+    	// muss immer der Name des Hamsters in Verbindung der Methode
+    	// genannt werden.
+    	
+    	// falsch: vor(), nimm(), gib(), linksUm()
+    	// richtig facepalm.vor(); facepalm.nimm(); facepalm.gib(); facepalm.linksUm();
+    	facepalm.vor();
+    	facepalm.vor();
+   		facepalm.vor();
+   		
+    	facepalm.linksUm();
+    	facepalm.linksUm();
+    	
+    	facepalm.vor();
+    	facepalm.vor();
+   		facepalm.vor();
+   		
+   		// es kann mehr als nur einen geben, daher brauchen wir eine Anweisung, die **neue**
+   		// Hamster erzeugt
+   		
+   		//dafür gibt es das Schlüsselwort "new", den new-Operator
+   		
+   		Hamster karateKid = new Hamster();
+   		Hamster schachtelMonster = new Hamster();
+   		
+   		// init (Reihe, Spalte, Blickrichtung, Anzahl der Körner im Maul[, Farbe])
+   		
+   		karateKid.init(0,0, Hamster.OST, 0);
+   		schachtelMonster.init(1,1, Hamster.SUED, 0);
+   		
+   		
+   		// eine "andere" Art der Initialiesierung neuer Hamster
+   		// new + init sind verknüpft
+   		Hamster greenLatern = new Hamster(1,1, Hamster.SUED, 0, Hamster.GRUEN);
+   		
+   		while (greenLatern.vornFrei()) {
+   			greenLatern.vor();
+   		}
+   		
+   		
+}

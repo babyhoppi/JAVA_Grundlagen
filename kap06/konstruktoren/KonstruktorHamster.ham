@@ -1,0 +1,43 @@
+/*class*/class KonstruktorHamster extends Hamster {    
+    
+    /**
+     * Konstruktor **ohne** Parameter  --> StandardKonstruktor
+     */
+     
+    DoozerHamster() {
+    
+    	// wir rufen den Konstruktor der Klasse Hamster auf
+    	super( 0, 0, Hamster.OST, 0 );
+    }
+    
+    /**
+     * Konstruktor mit den vier wichtigen Eigenschaften 
+     */
+     
+    DoozerHamster( int r, int s, int b, int a ) {
+    	
+    	// wir rufen den Konstruktor der Klasse Hamster auf
+    	super( r, s, b, a );
+    }
+    
+    /**
+     * Konstruktor mit zwei Parametern
+     */
+     
+     DoozerHamster( int r, int s ) {
+     
+     	// wir rufen den Konstruktor der Klasse Hamster auf
+    	super( r, s, Hamster.OST, 0 );
+     }
+     
+     /** 
+      * Hoppe-Konstruktor mit fünf Parametern
+      */ 
+      
+     DoozerHamster( int r, int s, int b, int a, int f ) {
+     
+     	super();
+     	this.init( r, s, b, a, f );
+     }
+}
+}

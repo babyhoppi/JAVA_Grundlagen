@@ -1,0 +1,60 @@
+/*class*/class THamster extends Hamster {
+    
+    /**
+    *	Wir verwenden die Klasse Territorium, der Hamster braucht sich dann nicht so oft umdrehen
+    */
+       
+    
+    boolean linksFrei() {
+    	int reihe = this.getReihe();
+    	int spalte = this.getSpalte();
+    	
+    	switch (this.getBlickrichtung() ) {
+    	
+    		case Hamster.NORD:
+    			spalte--;	
+    			break;
+    		
+    		case Hamster.OST:
+    			reihe--;
+    			break;
+    		
+    		case Hamster.SUED:
+    			spalte++;
+    			break;
+    		
+    		case Hamster.WEST:
+    			reihe++;
+    			break;
+    	}
+    	
+    	return ! Territorium.mauerDa(reihe, spalte);
+    
+    }
+    
+    boolean rechtsFrei() {
+    	int reihe = this.getReihe();
+    	int spalte = this.getSpalte();
+    	
+    	switch (this.getBlickrichtung() ) {
+    	
+    		case Hamster.NORD:
+    			spalte++;	
+    			break;
+    		
+    		case Hamster.OST:
+    			reihe++;
+    			break;
+    		
+    		case Hamster.SUED:
+    			spalte--;
+    			break;
+    		
+    		case Hamster.WEST:
+    			reihe--;
+    			break;
+    	}
+    	
+    	return ! Territorium.mauerDa(reihe, spalte);
+    }
+}

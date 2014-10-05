@@ -1,0 +1,17 @@
+/*class*/class ElternHamster extends Hamster {
+    
+    boolean schoenesWetter;
+    
+    //Konstruktor
+    ElternHamster (boolean isSchoen){
+    	super();
+    	this.schoenesWetter = isSchoen;
+    	this.init(0,0, Hamster.OST,0);
+    }
+    
+    void vorwaerts(){
+    	while(this.vornFrei()) {
+    		this.vor();
+    	}
+    }
+}

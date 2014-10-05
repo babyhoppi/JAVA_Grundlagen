@@ -1,0 +1,28 @@
+/*object-oriented program*/void main() {
+
+	int maxR = Territorium.getAnzahlReihen();
+	int maxS = Territorium.getAnzahlSpalten();
+	
+	int reihe = 0;
+	int spalte = 0;
+	
+	int zielReihe  = Hamster.getStandardHamster().getReihe();
+	int zielSpalte = Hamster.getStandardHamster().getSpalte();
+	
+	SuchHamster  gl;
+	
+	while( reihe < maxR ) {
+		while( spalte < maxS ) {
+			
+			if( reihe == 0 || spalte == 0 || reihe == (maxR-1) || spalte == (maxS-1) ) {
+				gl = new SuchHamster( reihe, spalte );
+				gl.goTo( zielReihe, zielSpalte );			
+			}
+			
+			spalte++;
+		}
+		spalte = 0;
+		reihe++;
+	}
+	
+}

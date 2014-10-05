@@ -1,0 +1,44 @@
+/*object-oriented program*/ 	Hamster paul = Hamster.getStandardHamster();
+ 	int spalte = paul.getSpalte();
+    int reihe = paul.getReihe();
+    int richtung = paul.getBlickrichtung();
+
+void main() {
+    laufeInEcke();
+    Hamster thomas = new Hamster(paul.getReihe(),paul.getSpalte(),Hamster.OST,Hamster.GRUEN);
+    laufeInNaechsteEcke();
+    Hamster manu = new Hamster(paul.getReihe(),paul.getSpalte(),Hamster.OST,Hamster.ROT);
+    laufeInNaechsteEcke();
+    Hamster steffen = new Hamster(paul.getReihe(),paul.getSpalte(),Hamster.OST,Hamster.GELB);
+    laufeInNaechsteEcke();
+    Hamster maik = new Hamster(paul.getReihe(),paul.getSpalte(),Hamster.OST,Hamster.GRAU);
+    
+}
+
+public void laufeInEcke() {
+	
+	while( paul.getBlickrichtung() != 0){
+    paul.linksUm();
+    }
+    while( paul.getReihe() != 0){
+    paul.vor();
+    }
+    paul.linksUm();
+    while( paul.getSpalte() != 0){
+    	paul.vor();
+    }
+}
+
+public void laufeInNaechsteEcke() {
+	
+	if( !paul.vornFrei()){
+   		paul.linksUm();
+   	}
+   	while(paul.vornFrei()){
+   		paul.vor();
+	}
+}
+
+
+    
+    

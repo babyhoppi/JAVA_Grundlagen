@@ -1,0 +1,14 @@
+/*object-oriented program*/void main() {
+    
+    Hamster paul = new Hamster(0,0,Hamster.OST, 0);
+   
+    paul = null;
+ 	
+ 	paul =  new Hamster(1,1,Hamster.OST, 0);
+ 	paul.vor();
+  	paul.vor();	
+  	
+  	paul =  new Hamster(2,2,Hamster.OST, 0);
+ 	paul.linksUm();	
+   
+}

@@ -1,0 +1,61 @@
+/*class*/class SuchHamster extends Hamster {
+    
+	// Konstruktor 
+	SuchHamster( int r, int s ) {
+	
+		super();
+		
+		this.init( r, s, Hamster.OST, 0, Hamster.GRUEN );
+	}
+	
+	// lässt den Hamster zu den Koordinaten laufen
+	void goTo( int r, int s ) {
+	
+		int deltaReihe  = this.getReihe() - r;
+		int deltaSpalte = this.getSpalte() - s;
+		
+		this.laufeReihe( deltaReihe );
+		this.laufeSpalte( deltaSpalte ); 
+	}
+	
+	void drehen( int richtung) {
+	
+		while( this.getBlickrichtung() != richtung )
+			this.linksUm();
+	}
+	
+	void laufeReihe( int delta ) {
+	
+		if( delta == 0 )
+			return;
+			
+		if( delta > 0 )
+			this.drehen( Hamster.NORD );
+		else {
+			this.drehen( Hamster.SUED );
+			delta=-delta;
+		}
+			
+		this.laufe( delta );
+	}
+	
+	void laufeSpalte( int delta ) {
+		
+		if( delta == 0 )
+			return;
+			
+		if( delta > 0 )
+			this.drehen( Hamster.WEST);
+		else {
+			this.drehen( Hamster.OST );
+			delta=-delta;
+		}
+		this.laufe( delta );
+	}
+	
+	void laufe( int schritte ) {
+	
+		while( schritte-- > 0 )
+			this.vor();
+	}
+}

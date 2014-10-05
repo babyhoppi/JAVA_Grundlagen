@@ -1,0 +1,102 @@
+/*class*/class MeinHamsterHuerden extends Hamster {
+
+	void rechtsUm() {
+    	this.linksUm();
+    	this.linksUm();
+    	this.linksUm();
+    }
+    
+	boolean naechsteMauer() {
+    	if( this.kornDa() )
+    		return false;
+    
+    	while( this.vornFrei() ) {
+      		this.vor();
+    		if( this.kornDa() )
+    			return false;
+    	}
+    	
+    	return true;
+    }
+    
+    void huerdeRauf() {
+    	
+    	this.linksUm();
+    	this.vor();
+    	
+    	while( !this.rechtsFrei() )
+    		this.vor();
+    		
+    	this.rechtsUm();
+    	
+    	this.vor();
+    }
+    
+    void huerdeRueber() {
+    	
+    	while( !this.rechtsFrei() )
+    		this.vor();
+    }
+    
+    void huerdeRunter() {
+    	this.rechtsUm();
+
+		while( this.vornFrei() )
+    		this.vor();
+    	
+    	this.linksUm();
+    }
+    
+    boolean linksFrei() {
+    	int reihe = this.getReihe();
+    	int spalte = this.getSpalte();
+    	
+    	switch (this.getBlickrichtung() ) {
+    	
+    		case Hamster.NORD:
+    			spalte--;	
+    			break;
+    		
+    		case Hamster.OST:
+    			reihe--;
+    			break;
+    		
+    		case Hamster.SUED:
+    			spalte++;
+    			break;
+    		
+    		case Hamster.WEST:
+    			reihe++;
+    			break;
+    	}
+    	
+    	return ! Territorium.mauerDa(reihe, spalte);
+    
+    }
+    
+    boolean rechtsFrei() {
+    	int reihe = this.getReihe();
+    	int spalte = this.getSpalte();
+    	
+    	switch (this.getBlickrichtung() ) {
+    	
+    		case Hamster.NORD:
+    			spalte++;	
+    			break;
+    		
+    		case Hamster.OST:
+    			reihe++;
+    			break;
+    		
+    		case Hamster.SUED:
+    			spalte--;
+    			break;
+    		
+    		case Hamster.WEST:
+    			reihe--;
+    			break;
+    	}
+    	
+    	return ! Territorium.mauerDa(reihe, spalte);
+    }
+}
