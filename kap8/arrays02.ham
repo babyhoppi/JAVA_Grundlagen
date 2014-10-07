@@ -1,0 +1,20 @@
+/*object-oriented program*/void main() {
+    Hamster [] kaefig = new Hamster [Territorium.getAnzahlReihen()];
+    
+    // wir wollen einen Hamster in jeder Reihe des Territoriums 
+    
+    for(int i=0; i<kaefig.length; i++) {
+    	if( !Territorium.mauerDa(i,0)){
+    		kaefig[i] = new Hamster(i,0,Hamster.OST,0,Hamster.GRUEN);
+    	}
+    }
+    
+    //alle Hamster im Kaefig sollen von links nach rechts gehen
+    for(int i=0; i < kaefig.length; i++){	
+    	while (kaefig[i] != null && kaefig[i].vornFrei()) {
+    		kaefig[i].vor();
+    	}
+    }
+    
+    
+}

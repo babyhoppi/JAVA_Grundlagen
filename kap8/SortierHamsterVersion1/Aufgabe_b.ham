@@ -1,0 +1,49 @@
+/*object-oriented program*/import java.util.Arrays;
+
+void main() {
+
+int anzahlSpalten = Territorium.getAnzahlSpalten();
+int anzahlReihen = Territorium.getAnzahlReihen();
+int maxReihe = anzahlReihen - 1;
+
+SortierHamster paul = new SortierHamster(maxReihe, 0, Hamster.NORD, 0, Hamster.ROT);
+
+//paul.schreib("Bla: " + Arrays.toString(paul.pruefeReihen()));
+
+
+int [] x = paul.pruefeReihen();
+
+	for(int i = x.length; i > 1; i--){
+	
+	
+	
+		for(int j = 0; j < i - 1; j++){
+		
+	
+			
+			if(x[j] > x[j+1]){
+			paul.tauscheSpalte();
+			
+			int temp = x[j];
+			x[j] = x[j + 1];
+			x[j + 1] = temp;
+			}else{
+			if(paul.vornFrei()){
+			paul.vor();
+			}
+			}
+		
+		}
+		
+		//Spalte ermitteln
+		if(paul.getSpalte() == Territorium.getAnzahlSpalten() - 1){ 
+		paul.laufeZuKachel(Territorium.getAnzahlReihen() - 1, 0);
+		paul.rechtsUm();
+		}else{
+		
+		paul.laufeZuKachel(Territorium.getAnzahlReihen() - 1, 0);
+		}
+		
+	}
+	//Ende bubbleSort
+	}

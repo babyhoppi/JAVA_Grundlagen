@@ -1,0 +1,31 @@
+/*object-oriented program*/
+/**
+*	die Funktion erzeugt ein Hmaster-Array
+*	
+*	die Hamster werden in der linken oberen Ecke erzeugt.
+*
+*	@parm	anzahl Anzahl der zu erzeugenden Hamster
+*	@return	Hamster-Array mit initialisierten Hamstern | null
+*/
+
+Hamster [] erzeugeKaefig( int anzahl) {
+	
+	// überprüfe die Anzahl
+	if(anzahl < 0 ) {
+		return null;
+	}
+	// ein temporäres Warp-Hamster-Feld
+	Hamster [] tmp = new Hamster[anzahl];
+
+	while(anzahl-- > 0 ){
+		// erzeugt einen neuen Hamster und speichert diesen im Feld
+		tmp[anzahl] = new Hamster(0,0,Hamster.OST,0,Hamster.GRUEN );
+		
+	}
+	
+	return tmp;
+}
+
+void main() {
+    Hamster [] kaefig = erzeugeKaefig(10);
+}

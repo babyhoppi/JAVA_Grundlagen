@@ -1,0 +1,16 @@
+/*object-oriented program*/void main() {
+	
+	//ein int-Array deklarieren
+	int [] x;
+	
+	// .. und definieren
+	x = new int [100];    
+	
+	// ein Hamster-Array deklarieren
+	Hamster [] kaefig;
+	
+	// .. und definieren
+	kaefig = new Hamster[10];
+	
+	Hamster [] reihen = new Hamster [Territorium.getAnzahlReihen()];
+}

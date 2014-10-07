@@ -1,0 +1,19 @@
+/*object-oriented program*/void main() {
+	
+	int AnzahlSpalten	= Territorium.getAnzahlSpalten();
+	int AnzahlReihen	= Territorium.getAnzahlReihen();
+	int maxAnzahlElemente = AnzahlSpalten*AnzahlReihen;
+	
+
+	//zweidimensionales Arry deklarieren
+	Hamster [] kaefig;
+	
+	// .. und definieren
+	kaefig = new Hamster[maxAnzahlElemente];
+	
+	// und nun produzieren wir Hamster wie blöde....
+	
+	for (int i = 0; i < maxAnzahlElemente; i++) {
+			kaefig [i] = new Hamster(i/AnzahlSpalten,i%AnzahlSpalten, Hamster.OST, 0, Hamster.GRUEN);
+		}
+	}
