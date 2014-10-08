@@ -1,0 +1,27 @@
+/*class*/class SuperSchnellHamster extends SchnellHamster {
+    SuperSchnellHamster() {
+ 		super();
+ 	}
+ 	
+ 	SuperSchnellHamster(int r, int s, int b, int a) {
+ 		super(r,s,b,a);
+ 	}
+ 	
+ 	SuperSchnellHamster(int r, int s, int b, int a, int f) {
+ 		super(r,s,b,a,f);
+ 	}
+ 	
+ 	public void vor(){
+ 		super.vor();
+ 		rennDoppeltSoSchnellWieSchnellHamster();
+	}    
+	
+	void rennDoppeltSoSchnellWieSchnellHamster(){
+		if(this.vornFrei()){
+			super.vor();
+			if(this.vornFrei()){
+				super.vor();
+			}
+		}
+	}  
+}

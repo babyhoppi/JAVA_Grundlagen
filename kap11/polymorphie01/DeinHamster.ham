@@ -1,0 +1,22 @@
+/*class*/class DeinHamster extends MeinHamster {
+
+	    DeinHamster() {
+	    	super();
+	    }
+ 	
+ 	DeinHamster(int r, int s, int b, int a) {
+ 		super(r,s,b,a);
+ 	}
+ 	
+ 	DeinHamster(int r, int s, int b, int a, int f) {
+ 		super(r,s,b,a,f);
+ 	}
+ 	
+ 	//special feature
+ 	boolean rechtsFrei() {
+ 		this.rechtsUm();
+ 		boolean ret = this.vornFrei();
+ 		this.linksUm();
+ 		return ret;
+ 	}
+}

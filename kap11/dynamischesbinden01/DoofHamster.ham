@@ -1,0 +1,10 @@
+/*class*/class DoofHamster extends Hamster {
+
+	DoofHamster (int r, int s, int b, int k) {
+		super(r,s,b,k);
+	}    
+	
+	public void vor() {
+		this.linksUm();
+	}
+}

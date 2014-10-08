@@ -1,0 +1,25 @@
+/*class*/class Wettlauf {
+    
+    static Hamster rennRunde(Hamster [] sprinter) {
+    	
+    	for(int i=0;i<sprinter.length; i++) {
+    		if(sprinter[i].vornFrei()){
+    			sprinter[i].vor();
+    		}
+    		if(!sprinter[i].vornFrei()){
+    			return sprinter[i];
+    		}
+    	}
+    	return null;
+    }
+    
+    static Hamster durchfuehren(Hamster[] sprinter){
+    	Hamster sieger = null;
+    	
+    	do {
+    		sieger = Wettlauf.rennRunde(sprinter);
+    	}
+    	while (sieger == null); 
+    		return sieger;
+    }
+}

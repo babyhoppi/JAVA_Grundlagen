@@ -1,0 +1,22 @@
+/*object-oriented program*/void main() {
+    
+    int anzahlReihen = Territorium.getAnzahlReihen();
+        
+    Hamster[] sprinter = new Hamster[anzahlReihen];
+    
+    for(int i = 0; i < anzahlReihen; i++){
+    	sprinter[i] = new Hamster(i,0,Hamster.OST,0);
+    	i++;
+    	if(i< anzahlReihen){
+    		sprinter[i] = new SchnellHamster(i,0,Hamster.OST,0);
+    		i++;
+    	}
+    	if(i< anzahlReihen){
+    		sprinter[i] = new SuperSchnellHamster(i,0,Hamster.OST,0);
+    	}
+    }
+    
+    Hamster sieger = Wettlauf.durchfuehren(sprinter);
+    sieger.schreib("ICH HABE GEWONNEN");
+    
+}
