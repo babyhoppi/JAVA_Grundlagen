@@ -1,0 +1,6 @@
+/*class*/class CptFutureHamster extends MeinHamster {
+    
+    boolean rechtsFrei() {
+    	return Territorium.mauerDa(this.getReihe()+1, this.getSpalte());
+    }
+}

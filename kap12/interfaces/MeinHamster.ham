@@ -1,0 +1,17 @@
+/*class*/class MeinHamster extends Hamster implements Pruefbar {
+    public boolean hintenFrei() {
+    	return !Territorium.mauerDa( this.getReihe(), this.getSpalte()-1);
+    }
+    
+    public boolean linksFrei() {
+    	return !Territorium.mauerDa( this.getReihe()-1, this.getSpalte());
+    }
+    
+   	public boolean vornFrei() {
+    	return !Territorium.mauerDa( this.getReihe(), this.getSpalte()+1);
+    }
+    
+    public boolean rechtsFrei() {
+    	return !Territorium.mauerDa( this.getReihe()+1, this.getSpalte());
+    }
+}

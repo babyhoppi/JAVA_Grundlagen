@@ -1,0 +1,11 @@
+/*object-oriented program*/void main() {
+    
+    // wir benötigen für die Lösung **prüfbare** Hamster
+	InformationHamster x = new MeinHamster();
+	
+	((MeinHamster)x).init(0,0,Hamster.OST, 10);
+	
+	((MeinHamster)x).schreib("Kacheln im Territorium" + ((MeinHamster)x).kachelnImTerritorium());
+	((MeinHamster)x).schreib("Mauern im Territorium" + ((MeinHamster)x).mauernImTerritorium());
+	((MeinHamster)x).schreib("Körner im Territorium" + ((MeinHamster)x).koernerImTerritorium());
+}

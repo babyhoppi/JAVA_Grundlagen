@@ -1,0 +1,29 @@
+/*object-oriented program*/void main() {
+	
+	// in benötige **minimal** einen Hamster der "rechtsFrei():boolean" kann
+	//
+	// diese Minimalforderung ist durch jeden Hamster erfüllt, der von der
+	// **abstrakten** Klasse MeinHamster abgeleitet ist, denn alle davon
+	// abgeleiteten konkreten Klassen **müssen** das "rechtsFrei():boolean" implementieren
+
+	MeinHamster x;
+	
+	// x = new MeinHamster(); // geht NICHT weil meinHamster eine **ABSTRAKTE** Klasse ist
+	
+	x = new CptFutureHamster(); // das geht, weil DeinHamster als konkrete rechtsFrei() implementiert
+	x.init(0,0,Hamster.OST,50);
+	
+	pruefeUndLege(x);
+	while(x.vornFrei()) {
+		x.vor();
+		pruefeUndLege(x);
+	}
+    
+}
+
+void pruefeUndLege(MeinHamster x){
+	
+	if(x.rechtsFrei()) {
+		x.gib();
+	}
+}

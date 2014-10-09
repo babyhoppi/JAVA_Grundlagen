@@ -1,0 +1,15 @@
+/*object-oriented program*/void main() {
+    
+    // wir benötigen für die Lösung **prüfbare** Hamster
+	Pruefbar x = new MeinHamster();
+	
+	((MeinHamster)x).init(2,0,Hamster.OST, 10);
+	
+	while( ((MeinHamster)x).vornFrei()) {
+		if (((MeinHamster)x).rechtsFrei() && ((MeinHamster)x).linksFrei() ) {
+			((MeinHamster)x).gib();
+		}
+		((MeinHamster)x).vor();
+	}
+
+}

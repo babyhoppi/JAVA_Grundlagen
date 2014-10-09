@@ -1,0 +1,8 @@
+/*class*/interface Pruefbar{
+	
+	boolean rechtsFrei();
+	boolean linksFrei();
+	boolean vornFrei();
+	boolean hintenFrei();
+    
+}

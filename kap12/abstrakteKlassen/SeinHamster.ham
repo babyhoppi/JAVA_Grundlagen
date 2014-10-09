@@ -1,0 +1,15 @@
+/*class*/class SeinHamster extends DeinHamster {
+ 
+  boolean rechtsFrei() {
+    	
+    	this.rechtsUm();
+    	
+    	if(this.vornFrei()) {
+    		this.linksUm();
+    		return true;
+    	} else {
+    		this.linksUm();
+    		return true;
+    	}
+    }   
+}

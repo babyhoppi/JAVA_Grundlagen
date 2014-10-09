@@ -1,0 +1,26 @@
+/*class*/class MeinHamster extends Hamster implements InformationHamster {
+    int anzahlReihen = Territorium.getAnzahlReihen();
+    int anzahlSpalten = Territorium.getAnzahlSpalten();
+    
+    public int kachelnImTerritorium () {
+    	return anzahlReihen * anzahlSpalten;
+    }
+    
+    public int mauernImTerritorium () {
+    	int anzahlMauern =0;
+    	
+    	for(int i = 0; i < anzahlReihen;i++){
+    		for(int j = 0; j < anzahlSpalten;j++) {
+    			if( Territorium.mauerDa(i,j)){
+    				anzahlMauern++;
+    			}
+    		}
+    	}
+    	return anzahlMauern;
+    }
+    
+   	public int koernerImTerritorium () {
+    	return Territorium.getAnzahlKoerner();
+    }
+ 
+}
