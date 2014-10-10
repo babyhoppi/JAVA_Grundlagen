@@ -1,0 +1,18 @@
+/*class*/class CleanHamster extends ZahlHamster {
+
+	CleanHamster(int i)
+    {
+    	super(0,i,Hamster.SUED,0);
+    	zeichne();
+    }   
+    public void zeichne() {
+   		int i = 0;
+    	while(i<Territorium.getAnzahlReihen()){
+    		while(kornDa()){
+    			this.nimm();
+    		}
+    		this.vor();
+    		i++;
+    	}
+    }    
+}

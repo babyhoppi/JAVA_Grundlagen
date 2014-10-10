@@ -1,0 +1,39 @@
+/*class*/class FuenfHamster extends ZahlHamster
+{
+   	FuenfHamster(int r,int s)
+    {
+    	super(r,s,0,1000);
+    }   
+    public void zeichne()
+    {
+    	this.vor();
+    	this.gib(12);
+		this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.vor(2);
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.vor(2);
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor();
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor(2);
+    	this.gib(12);
+    	this.kehrt();
+    	this.vor(3);
+    	
+    }     
+}

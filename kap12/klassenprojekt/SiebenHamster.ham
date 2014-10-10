@@ -1,0 +1,36 @@
+/*class*/class SiebenHamster extends ZahlHamster 
+{
+    SiebenHamster(int r,int s)
+    {
+    	super(r,s,0,1000);
+    }   
+    public void zeichne()
+    {
+    	this.linksUm();
+    	this.vor(2);
+    	this.rechtsUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.rechtsUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor(5);
+    }      
+}    
+

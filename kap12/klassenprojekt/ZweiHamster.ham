@@ -1,0 +1,39 @@
+/*class*/class ZweiHamster extends ZahlHamster 
+{
+   	ZweiHamster(int r,int s)
+    {
+    	super(r,s,0,1000);
+    }   
+    public void zeichne()
+    {
+    	this.vor();
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.rechtsUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.rechtsUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor();
+    	this.gib(12);
+    	this.vor();
+    	this.gib(12);
+    	this.linksUm();
+    	this.vor(5);
+    }     
+}
